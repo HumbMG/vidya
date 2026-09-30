@@ -1,9 +1,9 @@
 import type { NavigationItem } from "@/types";
 
 const navigation: NavigationItem[] = [
-  { label: "Productos", href: "#productos" },
-  { label: "Experiencias", href: "#experiencias" },
-  { label: "Talento", href: "#talento" },
+  { label: "Productos", href: "/productos" },
+  { label: "Experiencias", href: "/experiencias" },
+  { label: "Talento", href: "/talento" },
 ];
 
 export const siteConfig = {

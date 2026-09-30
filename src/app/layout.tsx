@@ -3,6 +3,7 @@ import { Inter, Lora } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { CartProvider } from "@/components/cart/cart-provider";
 import { siteConfig } from "@/lib/site-config";
 
 import "./globals.css";
@@ -57,11 +58,13 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${inter.variable} ${lora.variable}`}>
-        <div className="flex min-h-screen flex-col">
-          <SiteHeader />
-          <div className="flex-1">{children}</div>
-          <SiteFooter />
-        </div>
+        <CartProvider>
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader />
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+          </div>
+        </CartProvider>
       </body>
     </html>
   );

@@ -97,10 +97,11 @@
 
   html {
     @apply scroll-smooth font-sans;
+    scroll-padding-top: 6rem;
   }
 
   body {
-    @apply min-h-screen bg-background text-foreground antialiased;
+    @apply min-h-screen overflow-x-clip bg-background text-foreground antialiased;
   }
 
   button:not(:disabled),
